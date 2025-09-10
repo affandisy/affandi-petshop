@@ -4,8 +4,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Affandi's Petshop</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
-    
+    <nav>
+        <div class="nav-header">
+            <div class="nav-logo">
+                <a href="#">Affandi's Petshop</a>
+            </div>
+            <div class="nav-menu-btn" id="menu-btn">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#store">Store</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header id="home">
+        <div class="section-container header-container">
+            <div class="header-content">
+                <h4>Welcome</h4>
+                <h1>Pet<br /><span>Doctor</span></h1>
+                <h2>Happy Pets, Happy You!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus tortor, dapibus a enim sed, euismod viverra nunc. 
+                    Pellentesque et vulputate lorem. Nam sed nibh felis. Vivamus placerat ipsum sit amet eros malesuada, 
+                    sit amet faucibus dui elementum. Curabitur congue nisi in auctor pellentesque.</p>
+                <div class="header-btn">
+                    <button>Start Here!
+                        <span><i class="ri-arrow-right-line"></i></span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-image">
+                <img src="https://placehold.co/250x250" alt="header-bg" class="header-img-bg"/>
+                <img src="https://placehold.co/200x200" alt="header">
+            </div>
+        </div>
+        <div class="header-bottom"></div>
+    </header>
+
+    <section class="section-container intro-container">
+        <p class="section-subheader">Intro</p>
+        <h2 class="section-header">Get to Know Us More</h2>
+        <div class="intro-grid">
+            <div class="intro-card">
+                <div class="intro-image">
+                    <img src="https://placehold.co/200x200" alt="Intro">
+                </div>
+                <h4>Pet Experts</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus tortor, dapibus a enim sed, euismod viverra nunc.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="intro-card">
+                <div class="intro-image">
+                    <img src="https://placehold.co/200x200" alt="Intro">
+                </div>
+                <h4>Pet Services</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus tortor, dapibus a enim sed, euismod viverra nunc.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="intro-card">
+                <div class="intro-image">
+                    <img src="https://placehold.co/200x200" alt="Intro">
+                </div>
+                <h4>Contact Us</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus tortor, dapibus a enim sed, euismod viverra nunc.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container about-container" id="about">
+        <p class="section-subheader">About Us</p>
+        <h2 class="section-header">What We can do for you</h2>
+        <div class="about-row">
+            <div class="about-image">
+                <img src="https://placehold.co/200x200" alt="about">
+            </div>
+            <div class="about-content">
+                <span><img src="https://placehold.co/200x200" alt="about-icon"></span>
+                <h4>Let us help</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus tortor, dapibus a enim sed, euismod viverra nunc.</p>
+            </div>
+        </div>
+        <div class="about-row">
+            <div class="about-image">
+                <img src="https://placehold.co/200x200" alt="about">
+            </div>
+            <div class="about-content">
+                <span><img src="https://placehold.co/200x200" alt="about-icon"></span>
+                <h4>Let us help</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus tortor, dapibus a enim sed, euismod viverra nunc.</p>
+            </div>
+        </div>
+        <div class="about-row">
+            <div class="about-image">
+                <img src="https://placehold.co/200x200" alt="about">
+            </div>
+            <div class="about-content">
+                <span><img src="https://placehold.co/200x200" alt="about-icon"></span>
+                <h4>Let us help</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus tortor, dapibus a enim sed, euismod viverra nunc.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="product" id="store">
+        <div class="section-container product-container">
+            <p class="section-subheader">Products</p>
+            <h2 class="section-header">Featured Pet Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://placehold.co/200x200" alt="product">
+                    <h4>Trash Bag</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus tortor, dapibus a enim sed, euismod viverra nunc.</p>
+                    <h3>Rp. 10.000</h3>
+                </div>
+                <div class="product-card">
+                    <img src="https://placehold.co/200x200" alt="product">
+                    <h4>Trash Bag</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus tortor, dapibus a enim sed, euismod viverra nunc.</p>
+                    <h3>Rp. 10.000</h3>
+                </div>
+                <div class="product-card">
+                    <img src="https://placehold.co/200x200" alt="product">
+                    <h4>Trash Bag</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus tortor, dapibus a enim sed, euismod viverra nunc.</p>
+                    <h3>Rp. 10.000</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container service-container" id="service">
+        <p class="section-subheader">Services</p>
+        <h2 class="section-header">What we can do for you?</h2>
+        <div class="service-flex">
+            <div class="service-card">
+                <div>
+                    <img src="https://placehold.co/200x200" alt="service">
+                </div>
+                <p>Delivery</p>
+            </div>
+            <div class="service-card">
+                <div>
+                    <img src="https://placehold.co/200x200" alt="service">
+                </div>
+                <p>Grooming Care</p>
+            </div>
+            <div class="service-card">
+                <div>
+                    <img src="https://placehold.co/200x200" alt="service">
+                </div>
+                <p>Pet Hotel</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="client">
+        <div class="section-container client-container">
+            <p class="section-subheader">Testimonials</p>
+            <h2 class="section-header">What People say about Us?</h2>
+            <!-- Slider main container -->
+        <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+        <div class="swiper-slide">
+            <div class="client-card">
+                <div class="client-details">
+                    <img src="https://placehold.co/200x200" alt="client">
+                    <div>
+                        <h4>John Doe</h4>
+                        <h5>Vetenarian</h5>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus tortor.</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="client-card">
+                <div class="client-details">
+                    <img src="https://placehold.co/200x200" alt="client">
+                    <div>
+                        <h4>Larry John</h4>
+                        <h5>Mechanic</h5>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus tortor.</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="client-card">
+                <div class="client-details">
+                    <img src="https://placehold.co/200x200" alt="client">
+                    <div>
+                        <h4>John Bohr</h4>
+                        <h5>Alchemist</h5>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus tortor.</p>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="section-container footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <a href="#">Affandi's Petshop</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Faq</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Address:</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Indramayu, Jawa Barat</a></li>
+                    <li><a href="#">View On Maps</a></li>
+                </ul>
+                <br/>
+                <h4>Inquiries:</h4>
+                <ul class="footer-links">
+                    <li><a href="#">+62 89670481489</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Stay updated with our latest news</p>
+                <form action="/">
+                    <input type="text" placeholder="Your Email">
+                    <button class="btn">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </form>
+                <br>
+                <h4>Follow Us</h4>
+                <ul class="footer-socials">
+                    <li>
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-tiktok-fill"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bar">
+            Copyright @ 2025: Affandi's Petshop
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
