@@ -20,65 +20,60 @@ const scrollRevealOption = {
     duration: 1000,
 };
 
-scrollRevealOption().reveal(".header-content h4", {
+ScrollReveal().reveal(".header-content h4", {
     ...scrollRevealOption,
 });
-scrollRevealOption().reveal(".header-content h1", {
+ScrollReveal().reveal(".header-content h1", {
     ...scrollRevealOption,
     delay: 500,
 });
-scrollRevealOption().reveal(".header-content h2", {
+ScrollReveal().reveal(".header-content h2", {
     ...scrollRevealOption,
     delay: 1000,
 });
-scrollRevealOption().reveal(".header-content p", {
+ScrollReveal().reveal(".header-content p", {
     ...scrollRevealOption,
     delay: 1500,
 });
-scrollRevealOption().reveal(".header-btn", {
+ScrollReveal().reveal(".header-btn", {
     ...scrollRevealOption,
     delay: 2000,
 });
 
-scrollRevealOption().reveal(".intro-card", {
+ScrollReveal().reveal(".intro-card", {
     ...scrollRevealOption,
     interval: 500,
 });
 
-scrollRevealOption().reveal(".about-row:nth-child(3) .about-image img, .about-row:nth-child(5) .about-image img", {
+ScrollReveal().reveal(".about-row:nth-child(3) .about-image img, .about-row:nth-child(5) .about-image img", {
     ...scrollRevealOption,
     origin: "left",
 });
 
-scrollRevealOption().reveal(".about-row:nth-child(4) .about-image img", {
+ScrollReveal().reveal(".about-row:nth-child(4) .about-image img", {
     ...scrollRevealOption,
     origin: "right",
 });
 
-scrollRevealOption().reveal(".about-content span", {
+ScrollReveal().reveal(".about-content span", {
     ...scrollRevealOption,
     delay: 500,
 });
-scrollRevealOption().reveal(".about-content h4", {
+ScrollReveal().reveal(".about-content h4", {
     ...scrollRevealOption,
     delay: 1000,
 });
-scrollRevealOption().reveal(".about-content p", {
+ScrollReveal().reveal(".about-content p", {
     ...scrollRevealOption,
     delay: 1500,
 });
-scrollRevealOption().reveal(".product-card", {
+ScrollReveal().reveal(".product-card", {
     ...scrollRevealOption,
-    interval: 500,
-});
-
-scrollRevealOption().reveal(".service-card", {
-    duration: 1000,
     interval: 500,
 });
 
 const swiper = new Swiper(".swiper", {
-    slidePerView: 2,
+    slidesPerView: 2,
     spaceBetween: 20,
     loop: true,
-})
+});
