@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi - Professional Pet Care Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+        <nav>
+        <div class="nav-header">
+            <div class="nav-logo">
+                <a href="#">Affandi's PetCare</a>
+            </div>
+            <div class="nav-menu-btn" id="menu-btn">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/gallery.html">Gallery</a></li>
+            <li><a href="/service.html">Services</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Simulasi Perawatan</h4>
+                </div>
+                <div class="card-body p-4">
+                    <form id="simulasiForm">
+                        <div class="mb-3">
+                            <label for="jumlahHewan" class="form-label fw-bold">Jumlah Hewan Peliharaan:</label>
+                            <select class="form-select" id="jumlahHewan">
+                                <option selected disabled>Pilih jumlah...</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="perluGrooming" class="form-label fw-bold">Apakah Perlu Grooming?</label>
+                            <select class="form-select" id="perluGrooming">
+                                <option selected disabled>Pilih jawaban...</option>
+                                <option value="ya">Ya</option>
+                                <option value="tidak">Tidak</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="isMember" class="form-label fw-bold">Apakah Perlu Health Checkup?</label>
+                            <select class="form-select" id="perluHealthCheckup">
+                                <option selected disabled>Pilih jawaban...</option>
+                                <option value="ya">Ya</option>
+                                <option value="tidak">Tidak</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="perluHotel" class="form-label fw-bold">Apakah Perlu Penitipan (Hotel)?</label>
+                            <select class="form-select" id="perluHotel">
+                                <option selected disabled>Pilih jawaban...</option>
+                                <option value="ya">Ya</option>
+                                <option value="tidak">Tidak</option>
+                            </select>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="durasiPenitipan" class="form-label fw-bold">Estimasi Durasi Penitipan (hari):</label>
+                            <input type="number" class="form-control" id="durasiPenitipan" placeholder="Contoh: 3" min="0">
+                            <div class="form-text">Isi hanya jika Anda memilih "Ya" pada layanan penitipan.</div>
+                        </div>
+
+                        <hr>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success">Hitung Estimasi Biaya</button>
+                        </div>
+                    </form>
+
+                    <div id="hasilEstimasi" class="mt-4"></div>
+                </div>
+            </div>
+            </div>
+    </div>
+</div>
+
+
+
+    <footer id="contact">
+        <div class="section-container footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <a href="#">Affandi's Petshop</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/gallery.html">Gallery</a></li>
+                <li><a href="/service.html">Services</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Address:</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Indramayu, Jawa Barat</a></li>
+                </ul>
+                <br />
+                <h4>Inquiries:</h4>
+                <ul class="footer-links">
+                    <li><a href="#">+62 89670481489</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <ul class="footer-socials">
+                    <li>
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-tiktok-fill"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bar">
+            Copyright @ 2025: Affandi's Petshop
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        // Menentukan harga dasar untuk setiap layanan
+        const hargaGrooming = 150000;
+        const hargaCheckup = 2000000;
+        const hargaHotelPerHari = 100000;
+
+        // Mengambil elemen form dari HTML
+        const form = document.getElementById('simulasiForm');
+        const hasilDiv = document.getElementById('hasilEstimasi');
+
+        form.addEventListener('submit', function(event){
+
+            event.preventDefault();
+
+            const jumlahHewan = parseInt(document.getElementById('jumlahHewan').value)
+            const perluGrooming = document.getElementById('perluGrooming').value
+            const perluCheckup = document.getElementById('perluHealthCheckup').value
+            const perluHotel = document.getElementById('perluHotel').value
+            const durasiPenitipan = parseInt(document.getElementById('durasiPenitipan').value) || 0;
+
+            // Validasi jika ada input yang belum diisi
+            if (!jumlahHewan || !perluGrooming || !perluCheckup || !perluHotel) {
+                hasilDiv.innerHTML = `<div class="alert alert-danger">Harap isi semua pilihan terlebih dahulu.</div>`;
+                return;
+            }
+
+            // Hitung biaya berdasarkan pilihan pengguna
+            let biayaGrooming;
+            let biayaCheckUp;
+            let biayaHotel;
+
+            if (perluGrooming === 'ya') {
+            biayaGrooming = hargaGrooming;
+            } else {
+            biayaGrooming = 0;
+            }
+            
+            if (perluCheckup === 'ya') {
+            biayaCheckUp = hargaCheckup;
+            } else {
+            biayaCheckUp = 0;
+            }
+            
+            if (perluHotel === 'ya') {
+            biayaHotel = hargaHotelPerHari * durasiPenitipan;
+            } else {
+            biayaHotel = 0;
+            }
+
+            // Rumus Utama
+            const totalBiayaPerawatan = jumlahHewan * (biayaGrooming + biayaCheckUp + biayaHotel)
+
+            // Format angka menjadi format mata uang (Rp)
+            const formatter = new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0
+            });
+
+            // Menampilkan hasilnya di dalam div #hasilEstimasi
+            hasilDiv.innerHTML = `
+                <div class="alert alert-success">
+                    <h5 class="alert-heading">Estimasi Biaya Total:</h5>
+                    <p class="fs-4 fw-bold mb-0">${formatter.format(totalBiayaPerawatan)}</p>
+                </div>
+            `;
+            
+
+        })
+
+
+    </script>
+</body>
+</html>
