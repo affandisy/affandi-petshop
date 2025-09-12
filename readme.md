@@ -1,6 +1,6 @@
 # Affandi's Petshop - Toko Kebutuhan & Perawatan Hewan Peliharaan Online
 
-Sebuah platform e-commerce sederhana untuk menjual berbagai produk dan kebutuhan hewan peliharaan, mulai dari makanan, mainan, hingga aksesoris. Dan perawatan layanan hewan secara Online.
+Sebuah platform layanan sederhana untuk melayani berbagai kebutuhan hewan peliharaan, mulai dari Grooming, Klinik Hewan, hingga Hotel Hewan secara Online.
 
 ---
 
