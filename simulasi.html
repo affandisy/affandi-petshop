@@ -38,9 +38,11 @@
                 <div class="card-body p-4">
                     <form id="simulasiForm">
                         <div class="mb-3">
-                            <label for="jumlahHewan" class="form-label fw-bold">Jumlah Hewan Peliharaan:</label>
-                            <select class="form-select" id="jumlahHewan">
-                                <option selected disabled>Pilih jumlah...</option>
+
+                            <div class="mb-3">
+                            <label for="jumlahGrooming" class="form-label fw-bold">Jumlah Hewan untuk Grooming:</label>
+                            <select class="form-select" id="jumlahGrooming">
+                                <option value="0" selected>0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -50,6 +52,47 @@
                         </div>
 
                         <div class="mb-3">
+                            <label for="jumlahCheckup" class="form-label fw-bold">Jumlah Hewan untuk Health Checkup:</label>
+                            <select class="form-select" id="jumlahCheckup">
+                                <option value="0" selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                            <!-- <label for="jumlahHewan" class="form-label fw-bold">Jumlah Hewan Peliharaan:</label>
+                            <select class="form-select" id="jumlahHewan">
+                                <option selected disabled>Pilih jumlah...</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div> -->
+
+                        <div class="mb-3">
+                            <label for="jumlahHotel" class="form-label fw-bold">Jumlah Hewan untuk Penitipan (Hotel):</label>
+                            <select class="form-select" id="jumlahHotel">
+                                <option value="0" selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="durasiPenitipan" class="form-label fw-bold">Durasi Penitipan (hari):</label>
+                            <input type="number" class="form-control" id="durasiPenitipan" placeholder="Contoh: 3" min="0" value="0">
+                            <div class="form-text">Isi jika ada hewan yang akan dititipkan.</div>
+                        </div>
+
+                        <!-- <div class="mb-3">
                             <label for="perluGrooming" class="form-label fw-bold">Apakah Perlu Grooming?</label>
                             <select class="form-select" id="perluGrooming">
                                 <option selected disabled>Pilih jawaban...</option>
@@ -80,7 +123,7 @@
                             <label for="durasiPenitipan" class="form-label fw-bold">Estimasi Durasi Penitipan (hari):</label>
                             <input type="number" class="form-control" id="durasiPenitipan" placeholder="Contoh: 3" min="0">
                             <div class="form-text">Isi hanya jika Anda memilih "Ya" pada layanan penitipan.</div>
-                        </div>
+                        </div> -->
 
                         <hr>
 
@@ -118,7 +161,7 @@
             <div class="footer-col">
                 <h4>Address:</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Indramayu, Jawa Barat</a></li>
+                    <li><a href="#">Jl. Tanjungpura Ruko Grand Royal 2, Ruko No.2, Karanganyar, Kec. Indramayu, Kabupaten Indramayu, Jawa Barat 45213</a></li>
                 </ul>
                 <br />
                 <h4>Inquiries:</h4>
@@ -147,7 +190,7 @@
     <script>
         // Menentukan harga dasar untuk setiap layanan
         const hargaGrooming = 150000;
-        const hargaCheckup = 2000000;
+        const hargaCheckup = 200000;
         const hargaHotelPerHari = 100000;
 
         // Mengambil elemen form dari HTML
@@ -158,43 +201,18 @@
 
             event.preventDefault();
 
-            const jumlahHewan = parseInt(document.getElementById('jumlahHewan').value)
-            const perluGrooming = document.getElementById('perluGrooming').value
-            const perluCheckup = document.getElementById('perluHealthCheckup').value
-            const perluHotel = document.getElementById('perluHotel').value
+            const jumlahGrooming = parseInt(document.getElementById('jumlahGrooming').value);
+            const jumlahCheckup = parseInt(document.getElementById('jumlahCheckup').value);
+            const jumlahHotel = parseInt(document.getElementById('jumlahHotel').value);
             const durasiPenitipan = parseInt(document.getElementById('durasiPenitipan').value) || 0;
 
-            // Validasi jika ada input yang belum diisi
-            if (!jumlahHewan || !perluGrooming || !perluCheckup || !perluHotel) {
-                hasilDiv.innerHTML = `<div class="alert alert-danger">Harap isi semua pilihan terlebih dahulu.</div>`;
-                return;
-            }
+            const biayaGrooming = jumlahGrooming * hargaGrooming;
+            const biayaCheckup = jumlahCheckup * hargaCheckup;
+            const biayaHotel = jumlahHotel * hargaHotelPerHari * durasiPenitipan;
 
-            // Hitung biaya berdasarkan pilihan pengguna
-            let biayaGrooming;
-            let biayaCheckUp;
-            let biayaHotel;
+            const totalBiaya = biayaGrooming + biayaCheckup + biayaHotel;
 
-            if (perluGrooming === 'ya') {
-            biayaGrooming = hargaGrooming;
-            } else {
-            biayaGrooming = 0;
-            }
             
-            if (perluCheckup === 'ya') {
-            biayaCheckUp = hargaCheckup;
-            } else {
-            biayaCheckUp = 0;
-            }
-            
-            if (perluHotel === 'ya') {
-            biayaHotel = hargaHotelPerHari * durasiPenitipan;
-            } else {
-            biayaHotel = 0;
-            }
-
-            // Rumus Utama
-            const totalBiayaPerawatan = jumlahHewan * (biayaGrooming + biayaCheckUp + biayaHotel)
 
             // Format angka menjadi format mata uang (Rp)
             const formatter = new Intl.NumberFormat('id-ID', {
@@ -207,7 +225,7 @@
             hasilDiv.innerHTML = `
                 <div class="alert alert-success">
                     <h5 class="alert-heading">Estimasi Biaya Total:</h5>
-                    <p class="fs-4 fw-bold mb-0">${formatter.format(totalBiayaPerawatan)}</p>
+                    <p class="fs-4 fw-bold mb-0">${formatter.format(totalBiaya)}</p>
                 </div>
             `;
             
